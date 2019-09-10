@@ -23,15 +23,18 @@ def selection_sort(arr):
 print(selection_sort(arr1))
 
 
-arr1 = [5, 2, 3, 7, 8]
+arr1 = [5, 2, 3, 7, 0, 8]
 # TO-DO:  implement the Bubble Sort function below
 
 
 def bubble_sort(arr):
-    for i in range(len(arr)):
+    swapping = True
+    while swapping:
+        swapping = False
         for j in range(len(arr)-1):
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
+                swapping = True
 
     return arr
 
